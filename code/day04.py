@@ -7,7 +7,7 @@
 
 import re
 
-PASSPORT_PATTERN = re.compile(r"(\S+):(\S+)", flags=re.M)
+PASSPORT_PATTERN = re.compile(r"(\S+):(\S+)")
 REQUIRED_FIELDS = ('byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid')
 
 
@@ -48,7 +48,6 @@ def main():
         }
         if all(field in passport for field in REQUIRED_FIELDS):
             passports_with_required_fields += 1
-
             if has_valid_data(passport):
                 passports_with_valid_data += 1
 
