@@ -29,7 +29,7 @@ def has_valid_data(passport):
         (   (hgt[-2:] == 'cm' and 150 <= int(hgt[:-2]) <= 193) or
             (hgt[-2:] == 'in' and 59 <= int(hgt[:-2]) <= 76)
         ) and
-        len(hcl) == 7 and hcl[0] == '#' 
+        len(hcl) == 7 and hcl[0] == '#'
         and all(c in hex_digits for c in hcl[1:]) and
         ecl in valid_ecl and
         pid.isdigit() and len(pid) == 9
