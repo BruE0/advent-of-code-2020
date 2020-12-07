@@ -47,7 +47,7 @@ def main():
             break
 
     print(max(IDs)) # 892 (Part One)
-    print(lonely_seat) # 625
+    print(lonely_seat) # 625 (Part Two)
 
 
 if __name__ == "__main__":
