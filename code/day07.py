@@ -17,12 +17,11 @@ def generate_dict_from_textfile(filename):
     bag_count_pattern = re.compile(r"(\d+) (.+) bags*")
 
     contents = {}
-    for match in bag_pattern.findall(text):
-        bag = match[0]
-        if match[1] == "no other bags.":
+    for bag, inner_string in bag_pattern.findall(text):
+        if inner_string == "no other bags.":
             contents[bag] = []
         else:
-            inner_bag_strings = match[1].rstrip('.').split(', ')
+            inner_bag_strings = inner_string.rstrip('.').split(', ')
             inner_bags = [
                 (int(count), name)
                 for inner in inner_bag_strings
