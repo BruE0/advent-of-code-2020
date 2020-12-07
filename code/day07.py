@@ -8,7 +8,6 @@
 import re
 
 
-
 def generate_dict_from_textfile(filename):
     with open(filename) as f:
         text = f.read()
