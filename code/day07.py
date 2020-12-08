@@ -32,9 +32,10 @@ def generate_dict_from_textfile(filename):
 
 def contains_shiny(contents, bag):
     inner_bag_names = [name for count, name in contents[bag]]
-    if 'shiny gold' in inner_bag_names:
-        return True
-    return any(contains_shiny(contents, new_bag) for new_bag in inner_bag_names)
+    return (
+        'shiny gold' in inner_bag_names or
+        any(contains_shiny(contents, new_bag) for new_bag in inner_bag_names)
+    )
 
 
 def count_bags_inside(contents, bag):
