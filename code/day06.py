@@ -24,7 +24,7 @@ def main():
     actual_total_count = 0
     for group in all_answers:
         actual_total_count += len(
-            reduce(lambda x, y: set(x) & set(y), group, set(group[0]))
+            reduce(lambda x, y: set(x) & set(y), group)
         )
 
     print(actual_total_count) # 3570 (Part Two)
