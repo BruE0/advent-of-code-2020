@@ -8,7 +8,7 @@
 
 def subarray_sum(target, numbers):
     total = 0
-    cumsum = {-1: 0}
+    cumsum = {0: 0}
     for idx, num in enumerate(numbers):
         total += num
         if total - target in cumsum:
