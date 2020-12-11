@@ -6,7 +6,7 @@
 """
 
 from collections import Counter
-from functools import reduce
+
 
 def combinations(adapters):
     acc = {0: 1}
